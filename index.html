@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lottery Game</h1>
+        <div id="formContainer">
+            <div id="loginForm">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <span onclick="showRegistration()">Register</span></p>
+            </div>
+
+            <div id="registrationForm">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button onclick="register()">Register</button>
+                <p>Already have an account? <span onclick="showLogin()">Login</span></p>
+            </div>
+        </div>
+
+        <div id="gameContainer" style="display: none;">
+            <h2>Welcome, <span id="userDisplay"></span></h2>
+            <h3>Your Balance:Ksh <span id="balance">0</span></h3>
+            <input type="number" id="amount" placeholder="Amount to Deposit/Withdraw" required>
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+            <h3>Play the Lottery!</h3>
+            <input type="number" id="lotteryNumber" placeholder="Enter a number (1-10)" required>
+            <button onclick="playLottery()">Play!</button>
+            <p id="lotteryResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
